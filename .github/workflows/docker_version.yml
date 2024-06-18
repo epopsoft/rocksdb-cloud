@@ -1,0 +1,23 @@
+name: DockerVersion
+on:
+  push:
+    branches: ["*"]
+jobs:
+  build:
+    permissions:
+      contents: read
+    strategy:
+      matrix:
+        include:
+          - os: ubuntu-latest
+            build-group: linux-x64
+    runs-on: ${{ matrix.os }}
+    name: Build ${{ matrix.build-group }}
+    env:
+      BUILD_GROUP: ${{ matrix.build-group }}
+    steps:
+      - name: Docker version
+        run: |
+          set -x
+
+          docker version
