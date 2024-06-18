@@ -9,7 +9,7 @@ jobs:
     strategy:
       matrix:
         include:
-          - os: ubuntu-latest
+          - os: ubuntu-20.04
             build-group: linux-x64
     runs-on: ${{ matrix.os }}
     name: Build ${{ matrix.build-group }}
