@@ -1,5 +1,11 @@
 # Changelog
 
+## [9.1.8] - 2024-07-03
+
+### Added
+
+- Added support for ES Modules
+
 ## [9.1.7] - 2024-06-19
 
 ### Changes
